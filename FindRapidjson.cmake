@@ -6,7 +6,7 @@
 
 find_path(
 	RAPIDJSON_INCLUDE_DIR
-	NAMES RAPIDJSON.h
+	NAMES rapidjson/rapidjson.h
 	PATHS ${CONAN_INCLUDE_DIRS_RAPIDJSON}
 	)
 
