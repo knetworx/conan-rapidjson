@@ -19,7 +19,7 @@ class rapidjsonConan(ConanFile):
     unzipped_name = "rapidjson-%s" % version
 
     def source(self):
-        url = "https://github.com/redis/rapidjson/archive/%s" % self.zip_name
+        url = "https://github.com/miloyip/rapidjson/archive/%s" % self.zip_name
         download(url, self.zip_name)
         unzip(self.zip_name)
         os.unlink(self.zip_name)
@@ -32,7 +32,7 @@ class rapidjsonConan(ConanFile):
         self.copy("FindRapidjson.cmake", ".", ".")
 
         # Copying headers
-        self.copy(pattern="*.h", dst="include/rapidjson", src="./%s" self.unzipped_name, keep_path=False)
+        self.copy(pattern="*.h", dst="./include", src="./%s/include" % self.unzipped_name, keep_path=True)
 
     def package_info(self):
         self.cpp_info.libs = ['rapidjson']
