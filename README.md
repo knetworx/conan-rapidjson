@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/dwerner/conan-rapidjson.svg)](https://travis-ci.org/dwerner/conan-rapidjson)
+[![Build Status](https://travis-ci.org/knetworx/conan-rapidjson.svg)](https://travis-ci.org/knetworx/conan-rapidjson)
 
 
 # conan-rapidjson
@@ -13,20 +13,20 @@ Download conan client from [Conan.io](https://conan.io) and run:
     
 ## Upload packages to server
 
-    $ conan upload rapidjson/1.0.2@dwerner/stable --all
+    $ conan upload rapidjson/1.1.0@knetworx/stable --all
     
 ## Reuse the packages
 
 ### Basic setup
 
-    $ conan install rapidjson/1.0.2@dwerner/stable
+    $ conan install rapidjson/1.1.0@knetworx/stable
     
 ### Project setup
 
 If you handle multiple dependencies in your project is better to add a *conanfile.txt*
     
     [requires]
-    rapidjson/1.0.2@dwerner/testing
+    rapidjson/1.1.0@knetworx/testing
 
     [options]
     rapidjson:shared=true # false

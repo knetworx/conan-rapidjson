@@ -6,13 +6,13 @@ from conans import CMake
 
 class rapidjsonConan(ConanFile):
     name = "rapidjson"
-    version = "1.0.2"
+    version = "1.1.0"
     ZIP_FOLDER_NAME = "rapidjson-%s" % version
     generators = "cmake"
     settings = "os", "arch", "compiler", "build_type"
     options = {"shared": [True, False]}
     default_options = "shared=False"
-    url="http://github.com/dwerner/conan-rapidjson"
+    url="http://github.com/knetworx/conan-rapidjson"
     license="https://github.com/miloyip/rapidjson/license.txt"
     exports="FindRapidjson.cmake"
     zip_name = "v%s.zip" % version
